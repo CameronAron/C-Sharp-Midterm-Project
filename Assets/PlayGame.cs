@@ -33,6 +33,8 @@ public class PlayGame : MonoBehaviour
 
     public bool isBonusQuestion = false;
 
+    public string helpText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +81,12 @@ public class PlayGame : MonoBehaviour
 
     public void playerSubmitted()
     {
-        if (!isBonusQuestion)
+
+        if(Answer.text.ToLower() == "help")
+        {
+            resultText.text = helpText;
+        }
+        else if (!isBonusQuestion)
         {
             if (Answer.text.ToLower() == scriptArray[randomIndexNumber - 1].ToLower())
             {
@@ -132,6 +139,8 @@ public class PlayGame : MonoBehaviour
         nextQuestionButton.SetActive(false);
 
         isBonusQuestion = true;
+
+        Answer.text = "";
 
         resultText.text = "Who says the next spoken line after the one above?";
     }

@@ -645,6 +645,8 @@ MonoBehaviour:
   scoreText: {fileID: 511812658}
   questionNumber: {fileID: 759079065}
   isBonusQuestion: 0
+  helpText: The possible answers are THREEPIO, STORMTROOPER, VADER, REBEL, OFFICER,
+    LEIA, BERU, LUKE, OWEN, BEN, TARKIN, BAR PATRON, HAN, GREEDO, BIGGS, and PILOT
 --- !u!1 &531351472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1554,7 @@ MonoBehaviour:
   m_fontSize: 27.89
   m_fontSizeBase: 27.89
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1585,7 +1587,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -114.63607, y: 0, z: -119.04514, w: -10.287846}
+  m_margin: {x: -188.12073, y: 0, z: -189.59041, w: -10.287846}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1817,10 +1819,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.4
-  m_fontSizeBase: 31.4
+  m_fontSize: 63.55
+  m_fontSizeBase: 30.71
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
