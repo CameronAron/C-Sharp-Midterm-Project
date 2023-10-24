@@ -14,7 +14,7 @@ public class PlayGame : MonoBehaviour
 
     public int randomIndexNumber;
 
-    public int roundNumber = 1;
+    public int roundNumber = 0;
     //public bool canContinue = false;
 
     public TMP_Text QuoteBox;
@@ -35,9 +35,13 @@ public class PlayGame : MonoBehaviour
 
     public string helpText;
 
+    public GameObject inputField;
+
     // Start is called before the first frame update
     void Start()
     {
+        inputField.SetActive(false);
+
         if (!File.Exists(filePath))
         {
             Debug.Log("File doesn't exist");
@@ -74,8 +78,8 @@ public class PlayGame : MonoBehaviour
             Debug.Log("Error while reading from file");
 		}
 
-        randomIndexNumber = generateRandomOddNumber(lineCounter, scriptArray);
-        QuoteBox.text = "\"" + scriptArray[randomIndexNumber] + "\"";
+        //randomIndexNumber = generateRandomOddNumber(lineCounter, scriptArray);
+        //QuoteBox.text = "\"" + scriptArray[randomIndexNumber] + "\"";
 
     }
 
@@ -147,6 +151,8 @@ public class PlayGame : MonoBehaviour
 
     public void nextQuestion()
     {
+        inputField.SetActive(true);
+
         isBonusQuestion = false;
         roundNumber++;
 
