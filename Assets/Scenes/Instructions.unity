@@ -723,7 +723,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Paste Instructions Here
+  m_text: 'In this game you will be given a quote from the movie ''Star Wars: A New
+    Hope'' and your job will be to guess which character said that quote. You will
+    have five quotes to get as many points as possible. Each correct answer will
+    give you five points. After each correct answer you will be asked if you want
+    to get bonus points by guessing which character speaks next. If you guess the
+    bonus question correctly you will get 10 bonus points making the maximum number
+    of achievable points 75, however if you get the bonus question wrong, you will
+    lose 2 points. Also at any point you can type ''help'' to view a list of all
+    possible names that the answer could be.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -750,8 +758,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.6
-  m_fontSizeBase: 22.6
+  m_fontSize: 7.4
+  m_fontSizeBase: 7.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

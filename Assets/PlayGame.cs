@@ -27,6 +27,8 @@ public class PlayGame : MonoBehaviour
     public GameObject yesButton;
     public GameObject noButton;
 
+    public GameObject endGameButton;
+
     public float score = 0;
     public TMP_Text scoreText;
     public TMP_Text questionNumber;
@@ -40,10 +42,14 @@ public class PlayGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        filePath = Application.streamingAssetsPath + "/script.txt";
+
         inputField.SetActive(false);
 
         if (!File.Exists(filePath))
         {
+            QuoteBox.text = "couldn't find file";
             Debug.Log("File doesn't exist");
             return;
         }
@@ -188,12 +194,23 @@ public class PlayGame : MonoBehaviour
         //    roundNumber += 1;
         //}
 
-        scoreText.text = "Score: " + score;
-        questionNumber.text = "Question #" + roundNumber;
+        
 
         if (roundNumber == 6)
         {
-            Debug.Log("Game Over. Final score was " + score);
+            QuoteBox.text = "Game Over. Final score was " + score;
+            submitButton.SetActive(false);
+            nextQuestionButton.SetActive(false);
+            questionNumber.text = "";
+            resultText.text = "";
+            endGameButton.SetActive(true);
+            inputField.SetActive(false);
+            scoreText.text = "";
+        }
+        else
+        {
+            questionNumber.text = "Question #" + roundNumber;
+            scoreText.text = "Score: " + score;
         }
     }
 }
