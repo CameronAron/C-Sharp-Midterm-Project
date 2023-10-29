@@ -91,8 +91,11 @@ public class PlayGame : MonoBehaviour
 
     public void playerSubmitted()
     {
-
-        if(Answer.text.ToLower() == "help")
+	if(Answer.text == null || Answer.text == ""){
+        	resultText.text = "Please enter a valid answer";
+            return;
+        }
+        else if(Answer.text.ToLower() == "help")
         {
             resultText.text = helpText;
         }
